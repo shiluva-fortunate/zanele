@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+</head>
+
+<body>
+    <div class="column">
+        <h2>Expected output</h2>
+        <form>
+            <textarea name="textA" id="expected" rows="10" cols="35"></textarea>
+            <input type="button" value="Make Array One" onclick="makeArrayOne(textA.value)">
+        </form>
+        
+    </div>
+
+    <div class="column">
+        <h2>Your Actual output</h2>
+        <form>
+            <textarea name="txtB" id="actual" rows="10" cols="35"></textarea> 
+            <input type="button" value="Make Array Two" onclick="makeArrayTwo(txtB.value)">
+        </form>
+       
+    </div>
+
+    <div id="comparearea">
+        <button id="compare" type="button" onclick="compareArr(txtB.value, textA.value)">Compare</button> 
+    </div>
+
+    <p id="differences"></p>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+    function makeArrayOne(v){
+        var txtArrayOne = v.split('\n');
+
+        for(var i=0;i<txtArrayOne.length;i++){
+            alert(txtArrayOne[i]);
+        }
+
+        return txtArrayOne;
+    }
+
+    function makeArrayTwo(x){
+        var txtArrayTwo = x.split('\n');
+
+        for(var j=0;j<txtArrayTwo.length;j++){
+            alert(txtArrayTwo[j]);
+        }
+
+        return txtArrayTwo;
+    }
+
+    
+    function compareArr(t, s){
+        var q = txtArrayOne.length;
+        var p = txtArrayTwo.length;
+
+        if( q > p || p > q){
+            alert("arrays Are Not The Same")
+        }
+    }
+    
+</script>
+</html>

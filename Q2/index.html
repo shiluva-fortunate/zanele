@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question Two</title>
+        <link rel="stylesheet" href="quest-2.css">
+    </head>
+
+    <body>
+
+        <h2>Enter Your Marks</h2>
+
+        <div class="main-section">
+            <div>
+                <b class="label" >Test 1</b>
+                <input type="text" id="testOne"/>
+                <br>
+    
+                <b class="label">Test 2</b>
+                <input type="text" id="testTwo"/>
+                <br>
+    
+                <b class="label">Test 3</b>
+                <input type="text" id="testThree"/>
+                <br>
+    
+                <b class="label">Test 4</b>
+                <input type="text" id="testFour"/>
+                <br>
+    
+                <button type = "button" onclick = "calculate1()" id="btn"> Calculate </button>
+                <button type = "button"  onclick = "ClearFields()" id="btn-clear"> Clear </button>
+                <br>
+            </div>
+    
+            
+    
+            <div>
+                <input class="marks margin" type="text" id="pointsperc" disabled/>
+                <br>
+    
+                <br>
+                <input class="marks" type="text" id="pointsperc2" disabled/>
+                <br>
+    
+                <br>
+                <input class="marks" type="text" id="pointsperc3" disabled/>
+                <br>
+    
+                <br>
+                <input class="marks" type="text" id="pointsperc4" disabled/>
+                <br>
+            </div>
+        </div>
+
+    
+    </body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(function(){
+
+        function ClearFields(){
+
+            document.getElementById("#testOne").value = " ";
+            document.getElementById("#testTwo").value = " ";
+            document.getElementById("#testThree").value = "";
+            document.getElementById("#testFour").value = "";
+        }
+
+        $('#pointsperc').hide();
+       
+        $('#btn').on('click', function() {
+            calculate1();
+            $('#pointsperc').show();
+        });
+
+        function calculate1(){
+ 
+            var markOne = parseInt($('#testOne').val());
+            var perc="";
+
+            if(isNaN(markOne) || isNaN(markOne)){
+                perc=" ";
+            }else{
+                perc = ((markOne/50) * 100).toFixed(0);
+            }
+        $('#pointsperc').val(perc);
+        }
+
+///////////////////////////
+
+        $('#pointsperc2').hide();
+
+        $('#btn').on('click', function() {
+            calculate2();
+            $('#pointsperc2').show();
+        });
+
+        function calculate2(){
+ 
+            var markTwo = parseInt($('#testTwo').val());
+            var perc="";
+
+            if(isNaN(markTwo) || isNaN(markTwo)){
+                perc=" ";
+            }else{
+                perc = ((markTwo/60) * 100).toFixed(0);
+            }
+        $('#pointsperc2').val(perc);
+        }
+
+///////////////////////////
+
+        $('#pointsperc3').hide();
+
+        $('#btn').on('click', function() {
+            calculate3();
+            $('#pointsperc3').show();
+        });
+
+        function calculate3(){
+
+            var markTwo = parseInt($('#testThree').val());
+            var perc="";
+
+            if(isNaN(markTwo) || isNaN(markTwo)){
+                perc=" ";
+            }else{
+                perc = ((markTwo/60) * 100).toFixed(0);
+            }
+        $('#pointsperc3').val(perc);
+        }
+
+///////////////////////////
+
+        $('#pointsperc4').hide();
+
+        $('#btn').on('click', function() {
+            calculate4();
+            $('#pointsperc4').show();
+        });
+
+        function calculate4(){
+
+            var markTwo = parseInt($('#testFour').val());
+            var perc="";
+
+            if(isNaN(markTwo) || isNaN(markTwo)){
+                perc=" ";
+            }else{
+                perc = ((markTwo/50) * 100).toFixed(0);
+            }
+        $('#pointsperc4').val(perc);
+        }
+        
+    });
+
+</script>
+</html>

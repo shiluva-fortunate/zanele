@@ -1,0 +1,58 @@
+.main-content{
+    border: solid black 2px;
+    font-family: 'Comic Neue', cursive;
+    font-weight: 600;
+    /* font-size: ; */
+}
+
+.a-div{
+    border: solid black 2px;
+    text-align: left;
+    padding: 10px;
+} 
+
+.border{
+    border: solid black 2px;
+}
+
+.d-div{
+    text-align: right;
+    font-style: italic;
+    padding: 10px;
+}
+
+.f-div, .g-div{
+    width: 2.5%;
+    padding: 10px;
+}
+
+.g-holder{
+    width: 90%;
+}
+
+.e-div{
+    padding: 10px;
+}
+
+.h-div{
+    width: 33.3%;
+    padding: 10px;
+    text-align: right;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.left{
+    flex-direction: row-reverse;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.flex-div{
+    display: flex;
+}

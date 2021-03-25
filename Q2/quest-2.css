@@ -1,0 +1,53 @@
+body{
+    font-family: Helvetica;
+    font-size: 18px;
+}
+
+input{
+    width: 50px;
+    border-radius: 5px;
+    border: 2px lightgrey solid;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 2%;
+}
+
+button{
+    width: 100px;
+    padding: 15px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#btn{
+    border: none;
+    color: white;
+    background-color: lightgreen;
+}
+
+#btn-clear{
+    color: lightgreen;
+    background-color: #ffffff;
+    border: lightgreen solid 2px;
+}
+
+.marks{
+    border: none;
+    width: 180px;
+    color: black;
+    background-color: lightgreen;    
+}
+
+.margin{
+    margin-top: 2%;
+}
+
+.main-section{
+    display: flex;
+    justify-content: space-around;
+}
+
+h2{
+    text-align: center;
+}

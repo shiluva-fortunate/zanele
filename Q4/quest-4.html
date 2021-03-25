@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question Four</title>
+        <link rel="stylesheet" href="ques-4.css">
+    </head>
+
+    <body>
+        <div class="column">
+            <h2>Expected output</h2>
+            <textarea id="expected" rows="10" cols="35"></textarea>
+        </div>
+
+        <div class="column">
+            <h2>Your Actual output</h2>
+            <textarea id="actual" rows="10" cols="35"></textarea> 
+        </div>
+
+        <div id="comparearea">
+            <button id="compare">Compare</button> 
+        </div>
+
+        <ul id="differences"></ul>
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        function makeAray(v){
+            var txtArray = v.split('\n');
+
+            for(var i=0;i<txtArray.length;i++){
+            alert(txtArray[i]);
+            }
+            }
+    </script>
+        
+</html>

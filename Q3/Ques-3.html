@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Question Three</title>
+		<link rel="stylesheet" href="quest-3.css">
+	</head>
+
+	<body>
+
+		<h1>Reverse Sentence!</h1>
+		
+		<div> Phrase: <input id="phrase" type="text" size="40" /> </div>
+		<div> Filter: <input id="filter" type="text" size="10" /> </div>
+		<div> <button id="go">Go!</button> </div>
+		<div id="words"></div>
+		<div id="count"></div>
+	</body>
+
+	<script type="text/javascript">
+
+		window.onload = function() {
+			document.getElementById("go").onclick = goClick;
+		};
+		
+		function goClick() {
+			document.getElementById("words").innerHTML = "";
+			var filter = document.getElementById("filter").value.toLowerCase();
+			var words = document.getElementById("phrase").value.split(" ");
+			var kept = 0;
+			var filteredOut = 0;
+			var text = "";
+			for (var i = words.length - 1; i >= 0; i--) {
+				if (filter && words[i].toLowerCase().indexOf(filter) >= 0) {
+					filteredOut++;
+				} else {
+					var span = document.createElement("span");
+					span.className = "term";
+					span.innerHTML = words[i];
+					if (kept % 2 == 0) {
+						span.style.textDecoration = "underline";
+					}
+					document.getElementById("words").appendChild(span);
+					kept++;
+				}
+			}
+			
+			if (filteredOut > 0) {
+				document.getElementById("count").innerHTML = filteredOut + " word(s) filtered out.";
+			} else {
+				document.getElementById("count").innerHTML = "";
+			}
+		}
+		
+				</script>
+</html>
